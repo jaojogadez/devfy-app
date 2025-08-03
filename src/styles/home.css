@@ -1,0 +1,354 @@
+@import url("../styles/vars.css");
+
+body {
+  background-color: var(--branco);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  body {
+    flex-direction: row;
+    overflow: hidden;
+  }
+}
+
+main {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 80px;
+}
+
+.main-container {
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+/* Navbar */
+header {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  box-shadow: 60px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+header i {
+  font-size: 3em !important;
+}
+
+/* Main */
+
+.container-md h1 {
+  font-size: calc(1em + 2vw);
+  margin-bottom: 1rem;
+}
+
+.container-md {
+  padding: 1rem 1.5em;
+}
+
+/* Covers Musics */
+.container-md .covers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.container-md .covers .cover-item {
+  padding: 0.5rem;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.container-md .covers .cover-item img {
+  max-width: 90px;
+  width: 100%;
+  height: 90px;
+}
+
+.container-md .covers .cover-item h2 {
+  font-size: 0.9em;
+  font-weight: 450;
+}
+
+.container-md .covers .cover-item p {
+  font-size: 0.75em;
+}
+
+/* Playlist */
+.container-md .song {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--cinza);
+  padding: 0 1rem;
+  height: 65px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.container-md .song .song-details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.container-md .song .song-details img {
+  width: 40px;
+  height: 40px;
+}
+
+.container-md .song .song-details h2 {
+  font-size: 1em;
+  font-weight: 450;
+}
+
+.container-md .song .song-details p {
+  font-size: 0.75em;
+}
+
+.container-md .song i {
+  color: crimson;
+  font-size: 2em;
+}
+
+/* Nav */
+.navbar {
+  background-color: var(--branco);
+  padding: 0.5rem 1.5rem;
+  border-top: 1px solid var(--cinza);
+  margin-top: 0;
+  z-index: 1000;
+}
+
+.navbar .nav {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar .nav .nav-item .nav-link {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--preto);
+  text-decoration: none;
+}
+
+.navbar .nav .nav-item .nav-link:hover {
+  color: var(--azul);
+}
+
+.navbar .nav .nav-item .nav-link p {
+  font-size: 0.8em;
+}
+
+.active a {
+  color: var(--azul) !important;
+}
+
+.search {
+  width: 100%;
+}
+
+/* From uiverse.io by @satyamchaudharydev */
+/* removing default style of button */
+.form button {
+  border: none;
+  background: none;
+  color: #8b8ba7;
+}
+/* styling of whole input container */
+.form {
+  --timing: 0.3s;
+  --width-of-input: 200px;
+  --height-of-input: 40px;
+  --border-height: 2px;
+  --input-bg: #fff;
+  --border-color: #2f2ee9;
+  --border-radius: 30px;
+  --after-border-radius: 1px;
+  position: relative;
+  width: var(--width-of-input);
+  height: var(--height-of-input);
+  display: flex;
+  align-items: center;
+  padding-inline: 0.8em;
+  border-radius: var(--border-radius);
+  transition: border-radius 0.5s ease;
+  background: var(--input-bg, #fff);
+}
+/* styling of Input */
+.input {
+  font-size: 0.9rem;
+  background-color: transparent;
+  height: 100%;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+}
+/* styling of animated border */
+.form:before {
+  content: "";
+  position: absolute;
+  background: var(--border-color);
+  transform: scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: var(--border-height);
+  left: 0;
+  bottom: 0;
+  border-radius: 1px;
+  transition: transform var(--timing) ease;
+}
+/* Hover on Input */
+.form:focus-within {
+  border-radius: var(--after-border-radius);
+}
+
+input:focus {
+  outline: none;
+}
+/* here is code of animated border */
+.form:focus-within:before {
+  transform: scale(1);
+}
+/* styling of close button */
+/* == you can click the close button to remove text == */
+.reset {
+  border: none;
+  background: none;
+  opacity: 0;
+  visibility: hidden;
+}
+/* close button shown when typing */
+input:not(:placeholder-shown) ~ .reset {
+  opacity: 1;
+  visibility: visible;
+}
+/* sizing svg icons */
+.form svg {
+  width: 17px;
+  margin-top: 3px;
+}
+
+/* Sidebar */
+
+.sidebar {
+  width: 90px;
+  min-width: 90px;
+  background: var(--branco);
+  display: none;
+  flex-direction: column;
+  transition: width 250ms ease-in-out;
+  height: 100vh;
+}
+
+.sidebar.expand {
+  width: 260px;
+  min-width: 260px;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sidebar-logo span {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.toggle-btn {
+  background: var(--azul-claro);
+  color: var(--branco);
+  border: none;
+  cursor: pointer;
+  border-radius: 15%;
+  padding: 0.13rem;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding-top: 1rem;
+}
+
+.sidebar-item {
+  list-style: none;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  color: var(--preto);
+  text-decoration: none;
+  gap: 1rem;
+  transition: background 0.2s;
+}
+
+.sidebar-link:hover {
+  background-color: var(--cinza);
+}
+
+.sidebar-link i {
+  font-size: 1.25rem;
+}
+
+.sidebar-footer {
+  padding: 1rem;
+}
+
+.sidebar:not(.expand) .sidebar-logo span,
+.sidebar:not(.expand) .sidebar-logo img,
+.sidebar:not(.expand) .sidebar-link span {
+  display: none;
+}
+/* Corrige ícones centralizados quando sidebar está recolhida */
+.sidebar:not(.expand) .sidebar-link {
+  justify-content: center;
+  gap: 0;
+  padding: 0.75rem 0;
+}
+
+/* Corrige o botão de toggle se estiver desalinhado */
+.sidebar:not(.expand) .toggle-btn {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-logout {
+  border: 1px solid;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  font-weight: 550;
+  text-transform: uppercase;
+  color: #dc3545;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  transform: scale(0.9);
+  text-decoration: none;
+}
+.btn-logout:hover {
+  background-color: #dc3545;
+  color: #fff;
+}

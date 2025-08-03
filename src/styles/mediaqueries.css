@@ -1,0 +1,52 @@
+@media (min-width: 768px) {
+  .col-6 {
+    width: 50% !important;
+    height: auto;
+  }
+
+  .container-sm .col-6:first-child {
+    background: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .desktop {
+    display: block !important;
+  }
+
+  .mobile {
+    display: none !important;
+  }
+
+  .container-sm .col-6:first-child,
+  .container-sm .col-6:nth-child(2) {
+    height: 100% !important;
+  }
+
+  .container #signUp .col-6:first-child {
+    order: 2;
+  }
+
+  #menu-button {
+    display: none;
+  }
+
+  .container-md .song {
+    max-width: 450px;
+  }
+
+  .sidebar {
+    display: flex !important;
+  }
+
+  .container-md .covers {
+    display: flex !important;
+    flex-flow: row wrap;
+    gap: 3rem;
+  }
+
+  .container-md .covers .cover-item {
+    width: max-content;
+  }
+}

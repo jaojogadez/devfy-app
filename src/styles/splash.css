@@ -1,0 +1,35 @@
+@import url("./vars.css");
+
+.container-sm .col-6:first-child {
+  background: transparent url("../assets/logo.png") no-repeat right center/cover;
+}
+
+.col-6 h1 {
+  color: var(--branco);
+}
+
+.container-sm .col-6:nth-child(2) {
+  padding: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 3rem;
+}
+
+.btn {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 0;
+  background-color: transparent;
+  color: var(--branco);
+  font: normal bold 2em var(--font);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(0.9);
+}
