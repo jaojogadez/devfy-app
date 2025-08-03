@@ -34,30 +34,41 @@ Um web site desenvolvido para oferecer streaming de músicas.
 ✅ Mobile First <br>
 ✅ Responsividade para tablets, desktop e telas maiores <br>
 
-## 📂 Organização dos Arquivos da Mentoria
+## 📂 Organização dos Arquivos
+```
+📁 devfy/
+│
+├── 📂 src/                    # 🌐 Código-fonte principal do projeto
+│   ├── 📂 assets/             # 📁 Imagens, ícones, fontes e outros arquivos estáticos
+│   │
+│   ├── 📂 javascript/         # 🧠 Scripts JS separados por funcionalidades
+│   │   ├── form.js            # 📝 Lógica dos formulários
+│   │   ├── home.js            # 🏠 Comportamentos da página home
+│   │   └── splash.js          # 🚀 Animações e lógica da tela inicial (splash)
+│   │
+│   ├── 📂 styles/             # 🎨 Arquivos CSS separados por página ou função
+│   │   ├── animation.css      # ✨ Animações gerais
+│   │   ├── carousel.css       # 🎠 Estilos do carrossel
+│   │   ├── home.css           # 🏠 Estilo da página home
+│   │   ├── index.css          # 🗂️ Estilos globais
+│   │   ├── mediaqueries.css   # 📱 Responsividade 
+│   │   ├── player.css         # 🎧 Estilos do player de mídia
+│   │   ├── register.css       # 📝 Estilos do cadastro
+│   │   ├── splash.css         # 🚀 Estilos da splash screen
+│   │   └── vars.css           # 🎛️ Variáveis CSS (cores e fontes)
+│   │
+│   └── 📂 views/              # 🧾 Páginas HTML do projeto
+│       ├── home.html          # 🏠 Página principal
+│       ├── login.html         # 🔐 Tela de login
+│       ├── player.html        # 🎵 Página do player
+│       └── sign.html          # 📝 Tela de cadastro
+│
+├── index.html                 # 🚪 Entrada principal do projeto
+├── LICENSE                    # ⚖️ Licença do projeto
+└── README.md                  # 📖 Documentação e instruções
+```
 
-```
-📁 devfy-app/
-│
-├── 📂 aulas/
-│   ├── 📂 class_01/   # 🎓 Aula 01 - Primeiros passos com HTML
-│   ├── 📂 class_02/   # 🎓 Aula 02 - Estruturas do HTML como títulos, textos, listas, etc
-│   ├── 📂 class_03/   # 🎓 Aula 03 - Propriedades básicas do CSS como color, background, etc
-│   ├── 📂 class_04/   # 🎓 Aula 04 - Conceitos de Git e Versionamento de Código
-│
-├── 📂 exercises/ 
-│       ├── 📂 exercise_01/  # 📝 Exercício 01
-│       └── 📂 exercise_02/  # 📝 Exercício 02
-│
-├── 📂 projects/
-│   ├── 📂 challenge_26-04-25/  # 🏆 Desafio da Prova
-│   ├── 📂 devfy/               # 💻 Projeto DevFY
-│   ├── 📂 loginWeb/            # 🔐 Atividade Prática
-│   └── 📂 minicurso-django/    # 🐍 Mini-curso Django
-│
-├── 📜 LICENSE        # ⚖️ Licença
-└── 📄 README.md      # 📖 Documentação Principal
-```
+
 
 ## 📚 Documentação da API
 
